@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ComparacionString</string>
-    <string name="textview">TextView</string>
     <string name="escribe_algo">Escribe algo</string>
     <string name="comparar">comparar</string>
 </resources>

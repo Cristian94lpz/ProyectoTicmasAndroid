@@ -38,7 +38,7 @@
         tools:layout_editor_absoluteY="48dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_conversion_absoluteHeight="19dp"

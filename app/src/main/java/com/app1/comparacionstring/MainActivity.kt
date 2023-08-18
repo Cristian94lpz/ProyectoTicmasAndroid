@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.casilla1.addTextChangedListener {
 
-            if(it != null) mainViewModel.setText(it,1)
+            if(it != null) mainViewModel.setText(it.toString(),1)
 
 
 
         }
         binding.casilla2.addTextChangedListener {
 
-           if(it != null) mainViewModel.setText(it,2)
+           if(it != null) mainViewModel.setText(it.toString(),2)
 
 
         }
@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel.texto.observe(this){
                 when(it.resultado){
-                    true -> binding.textView.text = "Las cadenas de texto son iguales"
-                    false -> binding.textView.text = "Las cadenas de texto son diferentes"
-                    null-> binding.textView.text = "Completa ambas casillas de texto"
+                    true -> binding.textResultado.text = "Las cadenas de caracteres son iguales"
+                    false -> binding.textResultado.text = "Las cadenas de caracteres son diferentes"
+                    null-> binding.textResultado.text = "Completa ambas casillas de texto"
                 }
 
         }

@@ -1,7 +1,5 @@
 package com.app1.comparacionstring
 
-import android.text.Editable
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,20 +13,20 @@ class MainViewModel: ViewModel() {
     private  var  text1:String = ""
     private  var text2:String = ""
 
-    fun setText(t:Editable,n:Int){
+    fun setText(t:String,n:Int){
         when(n){
-            1 -> text1 = t.toString()
-            2 -> text2 = t.toString()
+            1 -> text1 = t
+            2 -> text2 = t
         }
 
-        Log.d("text1", text1 )
-        Log.d("text2", text2)
+       // Log.d("text1", text1 )
+      //  Log.d("text2", text2)
     }
 
 
     fun compara(){
-        Log.d("scopeCompara",text1+" "+ text2)
-        Log.d("comparacion", texto1.value?.resultado.toString())
+       // Log.d("scopeCompara",text1+" "+ text2)
+      //  Log.d("comparacion", texto1.value?.resultado.toString())
         if(text1 == "" || text2 == "") {
             texto1.value = Comparacion(null)
 
@@ -40,6 +38,14 @@ class MainViewModel: ViewModel() {
 
         }
 
+    }
+
+    //Funciones para probar cambio variables privadas
+    fun getText1():String{
+        return text1
+    }
+    fun getText2():String{
+        return text2
     }
 
 }
